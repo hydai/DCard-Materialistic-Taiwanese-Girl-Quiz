@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台女指數測驗 💅</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Protest+Revolution&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="startScreen" class="screen active">
+            <div class="title-section">
+                <h1 class="main-title">
+                    <span class="glitch" data-text="台女指數">台女指數</span>
+                    <span class="subtitle">測驗</span>
+                </h1>
+                <p class="description">根據 2025/11 DCard 與 Threads 拜金標準</p>
+                <div class="sparkles">✨💎✨</div>
+            </div>
+            <button class="start-btn" onclick="startQuiz()">
+                <span class="btn-text">開始測驗</span>
+                <span class="btn-glow"></span>
+            </button>
+            <div class="disclaimer">* 本測驗僅供娛樂，請勿過度認真 *</div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quizScreen" class="screen">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+                <div class="progress-text" id="progressText">1 / 20</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-card" id="questionCard">
+                    <div class="question-number" id="questionNumber">問題 1</div>
+                    <h2 class="question-text" id="questionText"></h2>
+                    <div class="options">
+                        <button class="option-btn" onclick="answer(true)">
+                            <span class="option-icon">✓</span>
+                            <span class="option-text">是，我有</span>
+                        </button>
+                        <button class="option-btn" onclick="answer(false)">
+                            <span class="option-icon">✗</span>
+                            <span class="option-text">不，我沒有</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="resultScreen" class="screen">
+            <div class="result-container">
+                <h2 class="result-title">你的台女指數</h2>
+                <div class="score-display">
+                    <div class="score-circle">
+                        <svg class="score-ring" viewBox="0 0 200 200">
+                            <circle class="score-ring-bg" cx="100" cy="100" r="90"></circle>
+                            <circle class="score-ring-fill" id="scoreRing" cx="100" cy="100" r="90"></circle>
+                        </svg>
+                        <div class="score-number" id="scoreNumber">0</div>
+                        <div class="score-percent">%</div>
+                    </div>
+                </div>
+                <div class="result-message" id="resultMessage"></div>
+                <div class="result-details" id="resultDetails"></div>
+                <button class="restart-btn" onclick="restartQuiz()">
+                    <span class="btn-text">重新測驗</span>
+                    <span class="btn-glow"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
