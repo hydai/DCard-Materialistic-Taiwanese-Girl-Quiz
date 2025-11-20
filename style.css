@@ -490,6 +490,31 @@ body {
     color: var(--text-secondary);
 }
 
+.source-link {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    opacity: 0.8;
+}
+
+.source-link p {
+    margin: 0;
+}
+
+.source-link a {
+    color: var(--primary-cyan);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.source-link a:hover {
+    color: var(--primary-pink);
+    text-shadow: var(--glow-pink);
+    border-bottom-color: var(--primary-pink);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .container {
